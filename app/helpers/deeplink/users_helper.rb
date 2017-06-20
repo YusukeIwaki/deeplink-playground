@@ -1,0 +1,2 @@
+module Deeplink::UsersHelper
+end

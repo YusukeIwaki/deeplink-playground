@@ -1,0 +1,22 @@
+<h1>TEST</h1>
+
+<h1>js=false</h1>
+<% User.all.each do |user| %>
+<p>・ <%= link_to deeplink_user_url(user.id), deeplink_user_path(user.id) %></p>
+<% end %>
+
+<hr/>
+
+<h1>js=true</h1>
+<% User.all.each do |user| %>
+<p>・ <%= link_to deeplink_user_url(user.id, js: true), deeplink_user_path(user.id, js: true) %></p>
+<% end %>
+
+<hr/>
+
+<h1>direct</h1>
+<% User.all.each do |user| %>
+<p>・ <%= link_to deeplink_user_sex_url(id: user.id, sex: user.sexes), deeplink_user_path(id: user.id, sex: user.sexes) %></p>
+<% end %>
+
+<%= link_to 'New User', new_user_path %>

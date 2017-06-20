@@ -1,0 +1,15 @@
+<html>
+<head>
+<script type="text/javascript">
+window.onload = function(evt) {
+    setTimeout(redirect, 1000)
+};
+var redirect = function() {
+    location.href = "<%= deeplink_user_sex_path(id: @user.id, sex: @user.sexes) %>";
+}
+</script>
+</head>
+<body>
+<%= deeplink_user_sex_path(id: @user.id, sex: @user.sexes) %> にリダイレクトします...
+</body>
+</html>
